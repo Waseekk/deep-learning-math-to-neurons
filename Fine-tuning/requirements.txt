@@ -1,0 +1,33 @@
+# Requirements for Fine_tune_Llama2_QLoRA_v2.ipynb
+#
+# Google Colab: torch is pre-installed — do NOT pip install it here,
+# it will conflict with Colab's CUDA-linked build.
+# Run this instead:
+#   !pip install -q transformers peft trl bitsandbytes accelerate datasets matplotlib
+#
+# Local GPU machine (Linux/WSL2): install PyTorch first from https://pytorch.org/get-started
+# then install the rest:
+#   pip install -r requirements.txt
+
+# ── Core Hugging Face stack ───────────────────────────────────────────────
+transformers>=4.40.0
+datasets>=2.18.0
+accelerate>=0.30.0
+
+# ── Parameter-Efficient Fine-Tuning ──────────────────────────────────────
+peft>=0.10.0
+
+# ── Supervised Fine-Tuning trainer ───────────────────────────────────────
+trl>=0.8.0
+
+# ── 4-bit / 8-bit quantization ───────────────────────────────────────────
+bitsandbytes>=0.43.0
+
+# ── Visualisation ────────────────────────────────────────────────────────
+matplotlib>=3.8.0
+
+# ── Hugging Face Hub (upload model) ──────────────────────────────────────
+huggingface-hub>=0.22.0
+
+# ── NOT listed here (install separately with CUDA variant) ───────────────
+# torch>=2.2.0   ← install via: pip install torch --index-url https://download.pytorch.org/whl/cu121

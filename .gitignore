@@ -1,1 +1,4 @@
-Fine-tuning/
+Fine-tuning/*
+!Fine-tuning/Fine_tune_Llama_2.ipynb
+!Fine-tuning/Fine_tune_Llama2_QLoRA_v3.ipynb
+!Fine-tuning/requirements.txt
